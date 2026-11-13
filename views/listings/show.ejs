@@ -1,11 +1,11 @@
 <% layout("layouts/boilerplate"); %>
     <div class="row mt-3">
-        <div class="col-8 offset-3">
+        <div class="col-md-8 offset-md-3 col-10 offset-1 mb-1">
             <h3>
                 <%=listing.title%>
             </h3>
         </div>
-        <div class="card col-6 offset-3 show-card listing-card">
+        <div class="card col-md-6 offset-md-3 col-10 offset-1 listing-card">
             <img src="<%=listing.image.url%>" class="card-img-top show-img" alt="listing_image">
             <div class="card-body">
                 <p class="card-text"><i>Owned By : <B>
@@ -37,7 +37,7 @@
                 </form>
             </div>
             <% } %>
-                <div class="col-8 offset-3">
+                <div class="col-md-8 offset-md-3 col-10 offset-1">
                     <hr>
                     <% if(currUser) { %>
                         <h4>Leave a Review</h4>
@@ -77,10 +77,10 @@
                         </form>
                         <% } %>
                             <div>
-                                <p><b>All Listing</b></p>
+                                <p><b>All Reviews</b></p>
                                 <div class="row mt-3">
                                     <% for(review of listing.reviews) { %>
-                                        <div class="card col-5 ms-3 mb-3">
+                                        <div class="card col-md-5 col-10 ms-3 mb-3">
                                             <div class="card-body">
                                                 <h5 class="card-title mb-2 mt-2">@<%= review.author.username %>
                                                 </h5>
